@@ -18,6 +18,7 @@ import profile_img from './profile-img.png';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
+import footer_bg_color from './public/footer-bg-color.png';
 import moon_icon from './moon_icon.png';
 import sun_icon from './sun_icon.png';
 import arrow_icon from './arrow-icon.png';
@@ -34,6 +35,10 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import work_1 from './work-1.png';
+import work_2 from './work-2.png';
+import work_3 from './work-3.png';
+import work_4 from './work-4.png';
 
 export const assets = {
     user_image,
@@ -57,6 +62,7 @@ export const assets = {
     download_icon,
     hand_icon,
     header_bg_color,
+    footer_bg_color,
     moon_icon,
     sun_icon,
     arrow_icon,
@@ -79,22 +85,22 @@ export const workData = [
     {
         title: 'Frontend project',
         description: 'Web Design',
-        bgImage: '/work-1.png',
+        bgImage: work_1,
     },
     {
-        title: 'Geo based app',
+        title: 'Spotify-clone app',
         description: 'Mobile App',
-        bgImage: '/work-2.png',
+        bgImage: work_2,
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'Movie Booking  site',
+        description: 'MERN Stack',
+        bgImage: work_3,
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
+        title: 'AI & ML',
+        description: 'Diabetic Prediction System',
+        bgImage: work_4,
     },
 ]
 
@@ -102,7 +108,7 @@ export const serviceData = [
     { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
     { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
     { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.graphics_icon, title: 'AI and Machine Learning', description: 'Building intelligent predictive systems using machine learning algorithms and data analysis techniques....', link: '' },
 ]
 
 export const infoList = [

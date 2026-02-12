@@ -21,7 +21,7 @@ const Navbar = () => {
             className='w-full'
         />
     </div>
-    <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 relative'>
+    <nav className='fixed top-0 left-0 right-0 w-full px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50'>
       <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 absolute left-1/2 -translate-x-1/2'>
         <li><a className='font-ovo' href="#home">Home</a></li>
         <li><a className='font-ovo' href="#about">About Me</a></li>
