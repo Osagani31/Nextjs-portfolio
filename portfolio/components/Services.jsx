@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { assets, serviceData } from '@/assets/assets';
 
 const Services = () => {
@@ -14,11 +13,11 @@ const Services = () => {
         {serviceData.map(({icon,title,description,link}, index) => (
             <div key={index}
             className='border border-gray-400 rounded-lg px-8 py-12 cursor-pointer transition-all duration-300 hover:bg-light-hover hover:-translate-y-1 hover:shadow-black'>
-                <Image src={icon} alt='' className='w-10'/>
+                <img src={icon} alt='' className='w-10'/>
                 <h3 className='text-lg my-4 text-gray-700'>{title}</h3>
                 <p className=' text-sm text-gray-600 leading-5'> {description}</p>
                 <a href={link} className='flex items-center gap-2 text-sm mt-5'>
-                    Read more <Image alt='' src={assets.right_arrow} className='w-4'/>
+                    Read more <img alt='' src={assets.right_arrow} className='w-4'/>
                 </a>
                
             </div>
