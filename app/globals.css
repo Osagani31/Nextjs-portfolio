@@ -3,7 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tailwind v4: custom theme (config file is ignored in v4) */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 @theme {
   --color-light-hover: #f5e6ff;
   --color-dark-hover: #2a004a;
