@@ -1,8 +1,32 @@
+"use client";
+
 import React from 'react';
+
 import { assets } from '@/assets/assets';
 
 const Contact = () => {
+  const [result, setResult] = React.useState('');
+  const onSubmit=async(event)=>{
+    event.preventDefault();
+    setResult('Sending......');
+    const formData = new FormData(event.target);
+
+    formData.append('access_key', '8f706415-29af-465a-87c9-c2b6d90d4a4d');
+
+    const response=await fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      body:formData
+    });
+    const data=await response.json();
+    if(data.success){
+      setResult('Message sent successfully');
+    }else{
+      setResult('Something went wrong');
+    } 
+  }
+
   return (
+
     <div 
       id='contact' 
       className='w-full px-[12%] py-10 scroll-mt-20 bg-no-repeat bg-center'
@@ -16,33 +40,38 @@ const Contact = () => {
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo'>
         Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in UI/UX design to full stack development.
       </p>
-      <form className='max-w-2xl mx-auto flex flex-col gap-4'>
+      <form  onSubmit={onSubmit} className='max-w-2xl mx-auto flex flex-col gap-4'>
         <div className='flex flex-col sm:flex-row gap-4'>
           <input
             type="text"
             placeholder='Enter your name'
             required
-            className='flex-1 px-4 py-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-gray-400'
+            className='flex-1 px-4 py-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-gray-400 font font-ovo'
+            name='name'
           />
           <input
             type="email"
             placeholder='Enter your email'
             required
-            className='flex-1 px-4 py-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-gray-400'
+            className='flex-1 px-4 py-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-gray-400 font font-ovo'
+            name='email'
           />
         </div>
         <textarea
           rows={6}
           placeholder='Enter your message'
           required
-          className='px-4 py-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-gray-400 resize-none'
-        />
+          className='px-4 py-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-gray-400 resize-none font font-ovo'
+          name='message'
+       
+       />
         <button
           type='submit'
           className='mt-2 w-full sm:w-auto px-10 py-3 bg-black text-white rounded-full font-ovo hover:bg-gray-800 transition-colors'
         >
           Submit now
         </button>
+        <p className='mt-4 font font-ovo'>{result}</p>
       </form>
     </div>
   );
