@@ -22,7 +22,8 @@ const Contact = () => {
       if (response.ok && data.success) {
         setResult('Message sent successfully');
       } else {
-        setResult('Something went wrong');
+        const message = data?.message || 'Something went wrong';
+        setResult(message);
       }
     } catch (error) {
       setResult('Something went wrong');
