@@ -6,24 +6,28 @@ import { assets } from '@/assets/assets';
 
 const Contact = () => {
   const [result, setResult] = React.useState('');
-  const onSubmit=async(event)=>{
+  const onSubmit = async (event) => {
     event.preventDefault();
-    setResult('Sending......');
+    setResult('Sending...');
+
     const formData = new FormData(event.target);
 
-    formData.append('access_key', ' your  ACCESS_KEY');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      });
 
-    const response=await fetch('https://api.web3forms.com/submit',{
-      method:'POST',
-      body:formData
-    });
-    const data=await response.json();
-    if(data.success){
-      setResult('Message sent successfully');
-    }else{
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setResult('Message sent successfully');
+      } else {
+        setResult('Something went wrong');
+      }
+    } catch (error) {
       setResult('Something went wrong');
-    } 
-  }
+    }
+  };
 
   return (
 
