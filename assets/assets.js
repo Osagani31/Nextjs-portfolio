@@ -44,6 +44,7 @@ export const workData = [
         description: 'Web Design',
         bgImage: '/work-1.png',
         link: 'https://www.behance.net/gallery/240815019/Serenella-Parfum',
+        deployment: '',
     },
      
     {
@@ -51,30 +52,35 @@ export const workData = [
         description: 'Mobile App',
         bgImage: '/work-2.png',
         link: '',
+        deployment: '',
     },
     {
         title: 'Movie Booking  site',
         description: 'MERN Stack',
         bgImage: '/work-3.png',
         link: 'https://github.com/Osagani31/MovWatch-MERN.git',
+        deployment: 'https://mov-watch.vercel.app/',
     },
     {
         title: 'AI & ML',
         description: 'Diabetic Prediction System',
         bgImage: '/work-4.png',
         link: 'https://github.com/Osagani31/Diabetic_Prediction_System.git',
+        deployment: '',
     },
     {
         title: 'Portfolio',
         description: 'Three.js',
         bgImage: '/work-5.png',
         link: 'https://github.com/Osagani31/Threejs-Portfolio.git',
+        deployment: 'https://osaganithreejsportfolio.vercel.app/',
     },
     {
         title: 'Library Management System',
         description: 'Java & MySQL',
         bgImage: '/work-6.png',
         link: 'https://github.com/Osagani31/Library-Management-System.git',
+        deployment: '',
     },
 ];
 

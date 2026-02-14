@@ -29,21 +29,34 @@ const Work = () => {
                 <h2 className='text-black font-ovo font-semibold dark:text-white'>{project.title}</h2>
                 <p className='text-gray-600 text-sm font-ovo dark:text-gray-300'>{project.description}</p>
               </div>
-              {project.link ? (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`${project.title} link`}
-                  className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-gray-300 transition dark:border-white dark:shadow-[2px_2px_0_#fff] dark:group-hover:bg-gray-800'
-                >
-                  <img src={assets.send_icon} alt='send icon' className='w-5 dark:invert' />
-                </a>
-              ) : (
-                <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] dark:border-white dark:shadow-[2px_2px_0_#fff]'>
-                  <img src={assets.send_icon} alt='send icon' className='w-5 dark:invert' />
-                </div>
-              )}
+              <div className='flex items-center gap-2'>
+                {project.deployment ? (
+                  <a
+                    href={project.deployment}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.title} deployment`}
+                    className='border rounded-full border-black px-3 py-1 text-xs font-ovo text-black shadow-[2px_2px_0_#000] transition group-hover:bg-gray-300 dark:border-white dark:text-white dark:shadow-[2px_2px_0_#fff] dark:group-hover:bg-gray-800'
+                  >
+                    Deploy
+                  </a>
+                ) : null}
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.title} link`}
+                    className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-gray-300 transition dark:border-white dark:shadow-[2px_2px_0_#fff] dark:group-hover:bg-gray-800'
+                  >
+                    <img src={assets.send_icon} alt='send icon' className='w-5 dark:invert' />
+                  </a>
+                ) : (
+                  <div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] dark:border-white dark:shadow-[2px_2px_0_#fff]'>
+                    <img src={assets.send_icon} alt='send icon' className='w-5 dark:invert' />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ))}
