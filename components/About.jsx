@@ -12,7 +12,7 @@ const About = () => {
     <div id='about' className='w-full px-[12%] pt-32 pb-10 scroll-mt-28'>
       <h4 className='text-center mb-2 text-lg font-ovo'>Introduction</h4>
       <h2 className='text-center text-5xl font-ovo'>About Me</h2>
-    <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
+    <div className='flex w-full flex-col lg:flex-row items-center lg:items-start gap-20 my-20'>
         <div className='w-64 sm:w-80 rounded-3xl max-w-none' >
              <img src={assets.user_image} alt="User Image" className='w-full rounded-3xl'/>
 
@@ -21,13 +21,13 @@ const About = () => {
           <p className='mb-10 max-w-2xl font-ovo text-gray-700 dark:text-gray-200'>
             I’m a third-year Computer Science undergraduate and aspiring Full Stack Developer with hands-on experience in building end-to-end web applications. I enjoy learning new technologies, solving real-world problems, and continuously improving my development skills.
           </p>
-          <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
+            <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl items-stretch'>
             {infoList.map(function ({ icon, iconDark, title, description }, index) {
                 return (
-                    <li className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:bg-light-hover hover:-translate-y-1 hover:shadow-black dark:border-gray-600 dark:hover:bg-dark-hover dark:hover:shadow-white' key={index}>
-                        <img src={isDark ? iconDark : icon} alt={title} className='w-7 mt-3' />
-                        <h3 className='my-4 font-semibold text-gray-700 dark:text-gray-200'>{title}</h3>
-                        <p className='text-gray-600 text-sm dark:text-gray-300'>{description}</p>
+                <li className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:bg-light-hover hover:-translate-y-1 hover:shadow-black dark:border-gray-600 dark:hover:bg-dark-hover dark:hover:shadow-white flex flex-col gap-3 h-full text-left' key={index}>
+                  <img src={isDark ? iconDark : icon} alt={title} className='w-7 mt-1' />
+                  <h3 className='text-base sm:text-lg font-semibold text-gray-700 dark:text-gray-200 break-words'>{title}</h3>
+                  <p className='text-gray-600 text-sm leading-relaxed dark:text-gray-300 break-words'>{description}</p>
                     </li>
 
                 );
