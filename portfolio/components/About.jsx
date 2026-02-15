@@ -12,7 +12,7 @@ const About = () => {
     <div id='about' className='w-full px-[12%] pt-32 pb-10 scroll-mt-28'>
       <h4 className='text-center mb-2 text-lg font-ovo'>Introduction</h4>
       <h2 className='text-center text-5xl font-ovo'>About Me</h2>
-    <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
+    <div className='flex w-full flex-col lg:flex-row items-center lg:items-start gap-20 my-20'>
         <div className='w-64 sm:w-80 rounded-3xl max-w-none' >
              <img src={assets.user_image} alt="User Image" className='w-full rounded-3xl'/>
 
@@ -24,17 +24,20 @@ const About = () => {
           <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
             {infoList.map(function ({ icon, iconDark, title, description }, index) {
                 return (
-                    <li className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:bg-light-hover hover:-translate-y-1 hover:shadow-black dark:border-gray-600 dark:hover:bg-dark-hover dark:hover:shadow-white' key={index}>
-                        <img src={isDark ? iconDark : icon} alt={title} className='w-7 mt-3' />
-                        <h3 className='my-4 font-semibold text-gray-700 dark:text-gray-200'>{title}</h3>
-                        <p className='text-gray-600 text-sm dark:text-gray-300'>{description}</p>
+                    <li
+                      className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer transition-all duration-300 hover:bg-light-hover hover:-translate-y-1 hover:shadow-black dark:border-gray-600 dark:hover:bg-dark-hover dark:hover:shadow-white flex flex-col gap-3 h-full'
+                      key={index}
+                    >
+                        <img src={isDark ? iconDark : icon} alt={title} className='w-7 mt-1' />
+                        <h3 className='text-base sm:text-lg font-semibold text-gray-700 dark:text-gray-200 break-words'>{title}</h3>
+                        <p className='text-gray-600 text-sm leading-relaxed dark:text-gray-300 break-words'>{description}</p>
                     </li>
 
                 );
             })}
           </ul>
         <h4 className='my-6 text-gray-700 font-ovo dark:text-gray-200'>Tools I use</h4>
-        <ul className='flex items-center gap-3 sm:gap-5'>
+        <ul className='flex items-center gap-3 sm:gap-5 flex-wrap'>
           {toolsData.map((tool,index)=>(
             <li className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 dark:border-gray-600'
              key={index}>
