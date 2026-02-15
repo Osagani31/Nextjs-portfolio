@@ -92,7 +92,7 @@ export const serviceData = [
 ];
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript, React Js, Next Js, Java, Python,PHP,Matlab,Dart,Flutter' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages & Libraries', description: 'HTML, CSS, JavaScript, React Js, Next Js, Java, Python,PHP,Matlab,Dart,Flutter,GSAP,Three.js' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Bsc. in Computer Science' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built  10+ projects' }
 ];
