@@ -87,21 +87,21 @@ export const workData = [
         description: 'Java & MySQL',
         bgImage: '/work-6.png',
         link: 'https://github.com/Osagani31/Library-Management-System.git',
-        ,
+        
     },
     {
         title: 'Train Management System',
         description: 'Java & MySQL',
         bgImage: '/work-8.png',
         link: 'https://github.com/Osagani31/Train_Booking_System.git',
-        ,
+        
     },
      {
         title: 'Student Detail System',
         description: 'Java & MySQL',
         bgImage: '/work-9.png',
         link: 'https://github.com/Osagani31/University-Student-Detail-System.git',
-        ,
+        
     },
 ];
 
