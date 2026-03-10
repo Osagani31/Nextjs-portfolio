@@ -51,7 +51,7 @@ export const workData = [
         title: 'Spotify-clone app',
         description: 'Mobile App',
         bgImage: '/work-2.png',
-        link: '',
+        link: 'https://github.com/Osagani31/Spotify-clone-Flutter.git',
         deployment: '',
     },
     {
@@ -61,12 +61,19 @@ export const workData = [
         link: 'https://github.com/Osagani31/MovWatch-MERN.git',
         deployment: 'https://mov-watch.vercel.app/',
     },
+     {
+        title: 'Expense Tracker  site',
+        description: 'MERN Stack',
+        bgImage: '/work-7.png',
+        link: 'https://github.com/Osagani31/Expense-Tracker-MERN.git',
+        
+    },
     {
         title: 'AI & ML',
         description: 'Diabetic Prediction System',
         bgImage: '/work-4.png',
         link: 'https://github.com/Osagani31/Diabetic_Prediction_System.git',
-        deployment: '',
+        ,
     },
     {
         title: 'Portfolio',
@@ -80,7 +87,21 @@ export const workData = [
         description: 'Java & MySQL',
         bgImage: '/work-6.png',
         link: 'https://github.com/Osagani31/Library-Management-System.git',
-        deployment: '',
+        ,
+    },
+    {
+        title: 'Train Management System',
+        description: 'Java & MySQL',
+        bgImage: '/work-8.png',
+        link: 'https://github.com/Osagani31/Train_Booking_System.git',
+        ,
+    },
+     {
+        title: 'Student Detail System',
+        description: 'Java & MySQL',
+        bgImage: '/work-9.png',
+        link: 'https://github.com/Osagani31/University-Student-Detail-System.git',
+        ,
     },
 ];
 
