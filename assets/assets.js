@@ -73,7 +73,7 @@ export const workData = [
         description: 'Diabetic Prediction System',
         bgImage: '/work-4.png',
         link: 'https://github.com/Osagani31/Diabetic_Prediction_System.git',
-        ,
+        
     },
     {
         title: 'Portfolio',
