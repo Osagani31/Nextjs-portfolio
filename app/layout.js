@@ -14,10 +14,24 @@ const ovo = Ovo({
   variable: "--font-ovo",
 });
 
-
 export const metadata = {
-  title: "Portfolio -Osagani",
-  description: "",
+  title: "Osagani Perera | Full Stack Developer",
+  description:
+    "Portfolio of Osagani Perera — Full Stack Developer specializing in React, Next.js, Node.js, and MERN stack. View projects, services, and get in touch.",
+  keywords: [
+    "Full Stack Developer",
+    "React",
+    "Next.js",
+    "MERN Stack",
+    "Web Developer",
+    "Osagani Perera",
+  ],
+  openGraph: {
+    title: "Osagani Perera | Full Stack Developer",
+    description:
+      "Passionate Full Stack Developer building modern, scalable web applications.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
