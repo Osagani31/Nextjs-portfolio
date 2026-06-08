@@ -62,6 +62,20 @@ export const workData = [
         deployment: 'https://mov-watch.vercel.app/',
     },
      {
+        title: 'Messaging  App',
+        description: 'MERN Stack',
+        bgImage: '/work5.png',
+        link: 'https://github.com/Osagani31/VibeChat.git',
+        deployment: 'https://vibechatapp-git-main-osagani31s-projects.vercel.app/login',
+    },
+     {
+        title: 'Ecommerce  App',
+        description: 'MERN Stack',
+        bgImage: '/work6.png',
+        link: 'https://github.com/Osagani31/Forever.git',
+        deployment: 'https://forever-eta-nine.vercel.app/',
+    },
+     {
         title: 'Expense Tracker  site',
         description: 'MERN Stack',
         bgImage: '/work-7.png',
